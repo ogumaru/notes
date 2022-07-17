@@ -34,6 +34,7 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
+          routeBasePath: "/"
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -48,7 +49,6 @@ const config = {
       navbar: {
         title: githubUserConfig.siteName,
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
