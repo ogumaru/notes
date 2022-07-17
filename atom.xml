@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ogumaru.github.io/notes/</id>
+    <title>Notes Blog</title>
+    <updated>2022-07-13T14:51:23.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ogumaru.github.io/notes/"/>
+    <subtitle>Notes Blog</subtitle>
+    <entry>
+        <title type="html"><![CDATA[First Blog Post]]></title>
+        <id>first-blog-post</id>
+        <link href="https://ogumaru.github.io/notes/first-blog-post"/>
+        <updated>2022-07-13T14:51:23.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
+        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <author>
+            <name>ogumaru</name>
+            <uri>https://github.com/ogumaru</uri>
+        </author>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>
