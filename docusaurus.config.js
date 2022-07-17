@@ -31,9 +31,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
         },
@@ -50,27 +48,12 @@ const config = {
       navbar: {
         title: githubUserConfig.siteName,
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} ${githubUserConfig.siteName}, Inc. Built with Docusaurus.`,
       },
