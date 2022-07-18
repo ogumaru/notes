@@ -1,5 +1,4 @@
 ---
-slug: 2022-07-18duplicated-value-in-set
 title: 【JavaScript】プリミティブでない値を持つSetにて重複が発生する
 authors: ogumaru
 tags: [javascript, python]
