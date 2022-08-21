@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[673],{7925:s=>{s.exports=JSON.parse('{"label":"prisma","permalink":"/notes/tags/prisma","allTagsPath":"/notes/tags","count":1}')}}]);
