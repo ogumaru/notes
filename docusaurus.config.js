@@ -4,17 +4,15 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const githubUserConfig = {
-  username: "ogumaru",
-  repositoryDirname: "notes",
+const siteConfig = {
   siteName: "Notes"
 }
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: githubUserConfig.siteName,
-  url: `https://${githubUserConfig.username}.github.io`,
-  baseUrl: `/${githubUserConfig.repositoryDirname}/`,
+  title: siteConfig.siteName,
+  url: "https://notes.onuonu.net",
+  baseUrl: `/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   projectName: "notes",
@@ -49,7 +47,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: githubUserConfig.siteName,
+        title: siteConfig.siteName,
         items: [
         ],
       },
@@ -57,7 +55,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ${githubUserConfig.siteName}, Inc. Built with Docusaurus.`,
+        copyright: "Built with Docusaurus.",
       },
       prism: {
         theme: lightCodeTheme,
