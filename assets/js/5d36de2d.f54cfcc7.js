@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[467],{6566:s=>{s.exports=JSON.parse('{"label":"wifi","permalink":"/notes/tags/wifi","allTagsPath":"/notes/tags","count":1}')}}]);
