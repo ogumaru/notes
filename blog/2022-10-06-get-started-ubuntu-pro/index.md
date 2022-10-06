@@ -94,7 +94,13 @@ sudo pro attach "${表示されているTOKEN}"
 
 トークンが漏れてしまった場合の対策は気になる。
 
-## `pro`コマンドについて
+## `pro`コマンドの実体について
+
+### 結論
+
+`ubuntu-advantage`が実体となっている。
+
+### `pro`コマンドの有無
 
 これまでの環境では`pro`コマンドは利用できなかった。
 
@@ -140,7 +146,9 @@ sudo apt update && sudo apt upgrade
 # > Processing triggers for man-db (2.10.2-1) ...
 ```
 
-また、コマンド自体は`ubuntu-advantage`へのシンボリックリンクになっている
+### 実体の確認と関連コマンド
+
+`pro`コマンドの実体を確認すると`ubuntu-advantage`へのシンボリックリンクになっていた。
 
 ```bash
 command -v pro
@@ -150,6 +158,17 @@ file "$(command -v pro)"
 # > /usr/bin/pro: symbolic link to ubuntu-advantage
 ```
 
+また、[ここ](https://ubuntu.com/security/certifications/docs/fips-enablement)に記載されているような`ua`コマンドも、同様に`ubuntu-advantage`へのシンボリックリンクとなっていた。
+
+```bash
+file "$(command -v ua )"
+/usr/bin/ua: symbolic link to ubuntu-advantage
+```
+
+[Ubuntu Pro Client](https://discourse.ubuntu.com/t/ubuntu-pro-client/31027)にも下記の記載がある。
+
+> Note: The Ubuntu Advantage client or UA client has been renamed to the Ubuntu Pro client in line with the rebranding of Ubuntu Advantage to Ubuntu Pro 4. Specific commands have also been updated to refer to Ubuntu Pro rather than Ubuntu Advantage.
+
 `ubuntu-advantage`自体を呼び出しても、ヘルプ内は`pro`となっていた。
 
 ```bash
@@ -158,9 +177,4 @@ ubuntu-advantage --help
 # > ...
 ```
 
-また、[ここ](https://ubuntu.com/security/certifications/docs/fips-enablement)に記載されているような`ua`コマンドも、同様に`ubuntu-advantage`へのシンボリックリンクとなっていた。
-
-```bash
-file "$(command -v ua )"
-/usr/bin/ua: symbolic link to ubuntu-advantage
-```
+[ドキュメントの修正コミット(docs: ua -> pro)](https://github.com/canonical/ubuntu-advantage-client/commit/a92c75598787e33b1c15dee8d05289c49357670f)でも見られるように、ドキュメントも`pro`へ更新されている。
