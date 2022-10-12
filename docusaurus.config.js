@@ -14,7 +14,7 @@ const githubUserConfig = {
 const config = {
   title: githubUserConfig.siteName,
   url: `https://gh.ogumaru.dev`,
-  baseUrl: `/${githubUserConfig.repositoryDirname}/`,
+  baseUrl: `/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   projectName: "notes",
