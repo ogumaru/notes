@@ -14,7 +14,7 @@ const githubUserConfig = {
 const config = {
   title: githubUserConfig.siteName,
   url: `https://${githubUserConfig.username}.github.io`,
-  baseUrl: `/${githubUserConfig.repositoryDirname}/`,
+  baseUrl: `/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   projectName: "notes",
