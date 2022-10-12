@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[685],{1069:s=>{s.exports=JSON.parse('{"label":"ubuntu","permalink":"/notes/tags/ubuntu","allTagsPath":"/notes/tags","count":3}')}}]);
