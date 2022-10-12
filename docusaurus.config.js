@@ -13,7 +13,7 @@ const githubUserConfig = {
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: githubUserConfig.siteName,
-  url: `https://${githubUserConfig.username}.github.io`,
+  url: `https://gh.ogumaru.dev`,
   baseUrl: `/${githubUserConfig.repositoryDirname}/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
