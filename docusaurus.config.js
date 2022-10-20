@@ -36,7 +36,8 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          routeBasePath: "/"
+          routeBasePath: "/",
+          blogSidebarCount: 10
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
