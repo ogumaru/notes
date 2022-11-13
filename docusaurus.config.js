@@ -5,15 +5,13 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const githubUserConfig = {
-  username: "ogumaru",
-  repositoryDirname: "notes",
   siteName: "Notes"
 }
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: githubUserConfig.siteName,
-  url: `https://${githubUserConfig.username}.github.io`,
+  url: `https://notes.ogumaru.dev`,
   baseUrl: `/`,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
