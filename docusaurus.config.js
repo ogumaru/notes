@@ -49,6 +49,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: "google-site-verification", content: "FkOa2T2mSsg15ct_wdtvmaCYhu63iM4TvYCCvOfYnL0" }
+      ],
       navbar: {
         title: githubUserConfig.siteName,
         items: [
