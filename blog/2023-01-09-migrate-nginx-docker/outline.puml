@@ -1,0 +1,39 @@
+@startuml
+
+skinparam dpi 128
+
+rectangle 旧構成 #dff0ff {
+  rectangle EC2 as before.ec2 #ffffff {
+    port 443 as before.nginx.port
+    agent nginx as before.nginx
+    rectangle "docker network" as before.docker {
+      port 8080 as before.shiori.port
+      agent shiori as before.shiori
+    }
+  }
+  agent クライアント as before.client
+  before.client -d-> before.nginx.port
+  before.nginx.port -d-> before.nginx
+  before.nginx .d.> before.shiori.port: proxy_pass
+  before.shiori.port -d-> before.shiori
+}
+
+rectangle 新構成 #dfe4ff {
+  rectangle EC2 as after.ec2 #ffffff {
+    ' node certbot as after.certbot
+    port 443 as after.nginx.port.external
+    rectangle "docker compose" as after.docker_network {
+    '   agent plantuml as after.plantuml
+      agent nginx as after.nginx
+      agent shiori as after.shiori
+      port 443 as after.nginx.port
+    }
+  }
+  agent クライアント as after.client
+  after.client -d-> after.nginx.port.external
+  after.nginx.port.external -d-> after.nginx.port
+  after.nginx.port -d-> after.nginx
+  after.nginx .d.> after.shiori: proxy_pass
+}
+
+@enduml
