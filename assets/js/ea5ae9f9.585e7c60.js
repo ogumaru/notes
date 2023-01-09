@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[1830],{4443:s=>{s.exports=JSON.parse('{"label":"nginx","permalink":"/tags/nginx","allTagsPath":"/tags","count":1}')}}]);
