@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[6896],{9683:e=>{e.exports=JSON.parse('{"label":"traefik","permalink":"/tags/traefik","allTagsPath":"/tags","count":1}')}}]);
