@@ -1,0 +1,53 @@
+@startuml
+
+skinparam dpi 128
+
+rectangle 旧構成 as before #dff0ff {
+  rectangle EC2 as before.ec2 #ffffff {
+    ' node certbot as before.certbot
+    port 443 as before.nginx.port.external
+    rectangle "docker compose" as before.docker_network {
+    '   agent plantuml as before.plantuml
+      agent nginx as before.nginx
+      agent shiori as before.shiori
+      agent trilium as before.trilium
+      agent plantuml as before.plantuml
+      port 443 as before.nginx.port
+    }
+  }
+  agent クライアント as before.client
+  before.client -d-> before.nginx.port.external
+  before.nginx.port.external -d-> before.nginx.port
+  before.nginx.port -d-> before.nginx
+  before.nginx .d.> before.shiori
+  before.nginx .d.> before.trilium: proxy_pass
+  before.nginx .d.> before.plantuml
+}
+
+rectangle 新構成 as after #dfe4ff {
+  rectangle EC2 as after.ec2 #ffffff {
+    ' node certbot as after.certbot
+    port 443 as after.traefik.port.external
+    rectangle "docker compose" as after.docker_network {
+    '   agent plantuml as after.plantuml
+      agent traefik as after.traefik
+      agent shiori as after.shiori
+      agent trilium as after.trilium
+      agent plantuml as after.plantuml
+      agent authelia as after.authelia
+      port 443 as after.traefik.port
+    }
+  }
+  agent クライアント as after.client
+  after.client -d-> after.traefik.port.external
+  after.traefik.port.external -d-> after.traefik.port
+  after.traefik.port -d-> after.traefik
+  after.traefik .d.> after.shiori: proxy_pass
+  after.traefik .d.> after.trilium: forwardauth
+  after.traefik .d.> after.plantuml: forwardauth
+  after.traefik <.u.> after.authelia: ユーザ認証
+}
+
+before -[hidden]r- after
+
+@enduml
